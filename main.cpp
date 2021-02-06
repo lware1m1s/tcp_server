@@ -16,7 +16,7 @@ void signal_handler( int sig )
 int main(int argc, char *argv[])
 {
     signal(SIGTERM, signal_handler); //Ensure graceful exit upon signal.
-    // start server on port 65123
+    
     int startRet = server.start(8089);
     if (startRet == 0) {
         std::cout << "Server setup succeeded" << std::endl;
